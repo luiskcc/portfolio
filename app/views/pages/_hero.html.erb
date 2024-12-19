@@ -1,0 +1,46 @@
+<section class="py-20 text-center relative overflow-hidden" data-controller="hero-animation">
+    <%# Background effects %>
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-[#238636] opacity-5 filter blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 right-0 top-1/2 bg-gradient-to-t from-[#0d1117] to-transparent"></div>
+    </div>
+
+    <div class="relative z-10">
+    <%# Profile Image %>
+      <div class="mb-8" data-hero-animation-target="image">
+        <%= image_tag "luis-headshot.jpeg", 
+            alt: "Luis Kerch",
+            class: "rounded-full mx-auto border-4 border-[#238636] shadow-lg w-[200px] h-[200px] object-cover opacity-0 scale-0 transform" %>
+      </div>
+
+      <%# Name %>
+      <h1 class="text-4xl font-bold mb-4 text-[#c9d1d9] opacity-0 -translate-y-4"
+          data-hero-animation-target="name">
+        Luis Kerch
+      </h1>
+
+      <%# Title %>
+      <h2 class="text-2xl text-[#58a6ff] mb-6 opacity-0 -translate-y-4"
+          data-hero-animation-target="title">
+        Full Stack Ruby on Rails Developer
+      </h2>
+
+      <%# Description %>
+      <p class="max-w-2xl mx-auto mb-8 text-[#8b949e] opacity-0 -translate-y-4"
+        data-hero-animation-target="description">
+        Passionate about creating robust and scalable web applications using Ruby on Rails and modern frontend technologies.
+      </p>
+
+      <%# Button %>
+      <div class="opacity-0 translate-y-4"
+          data-hero-animation-target="button">
+        <%= link_to "#projects", 
+            class: "inline-flex items-center gap-2 px-4 py-2 rounded-md bg-[#238636] hover:bg-[#2ea043] text-white transition-colors duration-300" do %>
+          View My Work
+          <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        <% end %>
+      </div>
+    </div>
+</section>

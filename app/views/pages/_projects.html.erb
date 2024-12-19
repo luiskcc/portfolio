@@ -1,0 +1,16 @@
+<section id="projects" class="py-20" data-controller="projects-animation">
+  <h2 class="text-3xl font-bold mb-8 text-center text-[#c9d1d9] opacity-0 translate-y-12"
+      data-projects-animation-target="title">
+    Projects
+  </h2>
+
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <% @projects.each_with_index do |project, index| %>
+      <div class="opacity-0 translate-y-12"
+           data-projects-animation-target="card"
+           data-index="<%= index %>">
+        <%= render "pages/project_card", project: project %>
+      </div>
+    <% end %>
+  </div>
+</section>
