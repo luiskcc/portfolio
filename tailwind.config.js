@@ -20,6 +20,9 @@ module.exports = {
           foreground: "#ffffff",    // White text on accent
         },
       },
+      spacing: {
+        '30': '7.5rem',
+      },
     },
   },
   plugins: [],

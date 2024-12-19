@@ -1,0 +1,24 @@
+<section id="experience" class="pt-30 pb-10" data-controller="experience-animation">
+    <h2 class="text-3xl font-bold mb-16 text-center text-[#c9d1d9] transform transition-all duration-700 ease-out"
+        data-experience-animation-target="title">
+        Experience
+    </h2>
+
+    <div class="space-y-8 max-w-4xl mx-auto px-4">
+        <% @experiences.each_with_index do |exp, index| %>
+        <div class="transform transition-all duration-700 ease-out"
+            data-experience-animation-target="card"
+            data-index="<%= index %>">
+            <div class="bg-[#161b22] border border-[#30363d] hover:border-[#58a6ff] transition-colors duration-300 h-full flex flex-col justify-center rounded-lg p-6">
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold text-[#c9d1d9]"><%= exp.title %></h3>
+                <p class="text-[#8b949e]"><%= exp.company %> | <%= exp.period %></p>
+            </div>
+            <div class="flex-grow">
+                <p class="text-[#c9d1d9]"><%= exp.description %></p>
+            </div>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</section>

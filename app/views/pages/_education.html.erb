@@ -1,0 +1,24 @@
+<section id="education" class="py-10" data-controller="education-animation">
+    <h2 class="text-3xl font-bold mb-24 text-center text-[#c9d1d9] translate-y-12"
+        data-education-animation-target="title">
+        Education
+    </h2>
+
+    <div class="space-y-8 max-w-4xl mx-auto px-4">
+        <% @educations.each_with_index do |edu, index| %>
+        <div class="transform transition-all duration-700 ease-out"
+            data-education-animation-target="card"
+            data-index="<%= index %>">
+            <div class="bg-[#161b22] border border-[#30363d] hover:border-[#58a6ff] transition-colors duration-300 h-full flex flex-col justify-center rounded-lg p-6">
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold text-[#c9d1d9]"><%= edu.degree %></h3>
+                <p class="text-[#8b949e]"><%= edu.school %> | <%= edu.period %></p>
+            </div>
+            <div>
+                <p class="text-[#c9d1d9]"><%= edu.description %></p>
+            </div>
+            </div>
+        </div>
+        <% end %>
+    </div>
+</section>

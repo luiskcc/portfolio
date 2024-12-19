@@ -16,10 +16,7 @@
       <%= turbo_frame_tag "stars_background" do %>
         <%= render "pages/stars_background" %>
       <% end %>
-      
-      <%= turbo_frame_tag "shooting_stars" do %>
-        <%= render "pages/shooting_stars" %>
-      <% end %>
+      <%= render "pages/shooting_stars" %>
       
       <main class="container mx-auto px-4 relative z-10">
         <%= yield %>

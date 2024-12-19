@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  degree: MyString
+  school: MyString
+  period: MyString
+  description: MyText
+  position: 1
+
+two:
+  degree: MyString
+  school: MyString
+  period: MyString
+  description: MyText
+  position: 1
